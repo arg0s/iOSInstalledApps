@@ -17,6 +17,8 @@
 		16FE888C15F35F020034F41F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FE888A15F35F020034F41F /* MainStoryboard_iPad.storyboard */; };
 		16FE888F15F35F020034F41F /* LLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FE888E15F35F020034F41F /* LLMasterViewController.m */; };
 		16FE889215F35F020034F41F /* LLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FE889115F35F020034F41F /* LLDetailViewController.m */; };
+		16FE889A15F35F760034F41F /* LLInstalledApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FE889915F35F760034F41F /* LLInstalledApps.m */; };
+		16FE889C15F36CE90034F41F /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16FE889B15F36CE90034F41F /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,9 @@
 		16FE888E15F35F020034F41F /* LLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLMasterViewController.m; sourceTree = "<group>"; };
 		16FE889015F35F020034F41F /* LLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLDetailViewController.h; sourceTree = "<group>"; };
 		16FE889115F35F020034F41F /* LLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLDetailViewController.m; sourceTree = "<group>"; };
+		16FE889815F35F760034F41F /* LLInstalledApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLInstalledApps.h; sourceTree = "<group>"; };
+		16FE889915F35F760034F41F /* LLInstalledApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLInstalledApps.m; sourceTree = "<group>"; };
+		16FE889B15F36CE90034F41F /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,9 @@
 		16FE886615F35F010034F41F = {
 			isa = PBXGroup;
 			children = (
+				16FE889B15F36CE90034F41F /* LICENSE.txt */,
+				16FE889815F35F760034F41F /* LLInstalledApps.h */,
+				16FE889915F35F760034F41F /* LLInstalledApps.m */,
 				16FE887B15F35F020034F41F /* iOSInstalledApps */,
 				16FE887415F35F020034F41F /* Frameworks */,
 				16FE887215F35F020034F41F /* Products */,
@@ -161,6 +169,7 @@
 				16FE888015F35F020034F41F /* InfoPlist.strings in Resources */,
 				16FE888915F35F020034F41F /* MainStoryboard_iPhone.storyboard in Resources */,
 				16FE888C15F35F020034F41F /* MainStoryboard_iPad.storyboard in Resources */,
+				16FE889C15F36CE90034F41F /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +184,7 @@
 				16FE888615F35F020034F41F /* LLAppDelegate.m in Sources */,
 				16FE888F15F35F020034F41F /* LLMasterViewController.m in Sources */,
 				16FE889215F35F020034F41F /* LLDetailViewController.m in Sources */,
+				16FE889A15F35F760034F41F /* LLInstalledApps.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
