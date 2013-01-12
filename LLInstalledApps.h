@@ -13,5 +13,7 @@
 + (NSArray *) runningApps;
 - (BOOL) appsInstalledWithScheme:(NSString *)applicationScheme;
 + (NSDictionary *) appsInstalledWithSchemes:(NSArray *)applicationSchemes;
++ (NSDictionary* ) appsInstalledWithSchemes:(NSArray *)applicationSchemes withProgressCallback:(void (^)(id))callbackBlock;
+
 
 @end

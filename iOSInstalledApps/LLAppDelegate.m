@@ -32,6 +32,13 @@
     NSDictionary* dict = [LLInstalledApps appsInstalledWithSchemes:schemes];
     assert(dict);
     NSLog(@"Installed apps: %@", dict);
+
+    dict = [LLInstalledApps appsInstalledWithSchemes:schemes withProgressCallback:^(id count) {
+        NSLog(@"Progress: %@", count);
+    }];
+    assert(dict);
+    NSLog(@"Installed apps: %@", dict);
+
     
     return YES;
 }

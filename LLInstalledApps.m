@@ -90,4 +90,19 @@ static LLInstalledApps *singleton= nil;
     return dict;
 }
 
++ (NSDictionary* ) appsInstalledWithSchemes:(NSArray *)applicationSchemes withProgressCallback:(void (^)(id))callbackBlock{
+    LLInstalledApps* instance = [LLInstalledApps sharedInstance];
+    NSMutableDictionary* dict = [@{} mutableCopy];
+    [applicationSchemes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString* scheme = obj;
+        [dict setObject:[NSNumber numberWithBool:
+                         [instance appsInstalledWithScheme:scheme]]
+                 forKey:scheme];
+        callbackBlock([NSNumber numberWithInteger:idx]);
+    }];
+    return dict;
+}
+
+
+
 @end
