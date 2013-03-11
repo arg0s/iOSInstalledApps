@@ -93,6 +93,7 @@ static LLInstalledApps *singleton= nil;
 + (NSDictionary* ) appsInstalledWithSchemes:(NSArray *)applicationSchemes withProgressCallback:(void (^)(id))callbackBlock{
     LLInstalledApps* instance = [LLInstalledApps sharedInstance];
     NSMutableDictionary* dict = [@{} mutableCopy];
+    
     [applicationSchemes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString* scheme = obj;
         [dict setObject:[NSNumber numberWithBool:
@@ -101,6 +102,24 @@ static LLInstalledApps *singleton= nil;
         callbackBlock([NSNumber numberWithInteger:idx]);
     }];
     return dict;
+}
+
++ (NSArray* ) appsInstalledWithSchemes:(NSArray *)applicationSchemes withProgressCallback:(void (^)(id))callbackBlock maxSize:(int) maxSize{
+    LLInstalledApps* instance = [LLInstalledApps sharedInstance];
+    NSMutableArray* installed_schemes = [@[] mutableCopy];
+    
+    [applicationSchemes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString* scheme = obj;
+        if([installed_schemes count]>maxSize){
+            *stop=YES;
+            return;
+        }
+        if ([instance appsInstalledWithScheme:scheme]) {
+            [installed_schemes addObject:scheme];
+        }
+        callbackBlock([NSNumber numberWithInteger:idx]);
+    }];
+    return installed_schemes;
 }
 
 
